@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 95%;
+    --foreground: 240 10% 10%;
+    --card: 240 10% 90%;
+    --card-foreground: 240 10% 10%;
+    --popover: 240 10% 90%;
+    --popover-foreground: 240 10% 10%;
+    --primary: 270 80% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 10% 75%;
+    --secondary-foreground: 240 10% 10%;
+    --muted: 240 10% 85%;
+    --muted-foreground: 240 10% 50%;
+    --accent: 240 10% 75%;
+    --accent-foreground: 240 10% 10%;
+    --destructive: 0 84% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 10% 70%;
+    --input: 240 10% 70%;
+    --ring: 270 80% 50%;
+    --radius: 0.5rem;
+    --sidebar-background: 240 10% 92%;
+    --sidebar-foreground: 240 10% 10%;
+    --sidebar-primary: 270 80% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 10% 75%;
+    --sidebar-accent-foreground: 240 10% 10%;
+    --sidebar-border: 240 10% 70%;
+    --sidebar-ring: 270 80% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-[hsl(var(--background))] text-[hsl(var(--foreground))];
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
