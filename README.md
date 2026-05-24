@@ -61,8 +61,8 @@ npm run dev:client  # Frontend on port 5173
 ### Access the Application
 
 - **Dashboard:** http://localhost:5173
-- **API Base:** http://localhost:5001/api
-- **WebSocket:** ws://localhost:5001/ws
+- **API Base:** http://localhost:5010/api
+- **WebSocket:** ws://localhost:5010/ws
 
 ## API Endpoints
 
@@ -138,8 +138,8 @@ npm run server:watch
 ## Troubleshooting
 
 - **API requests failing (404/502) or WebSocket connection refused?**
-  - ✅ Ensure backend is running: `npm run server` (listens on `http://localhost:5001`)
-  - ✅ Confirm `vite.config.ts` proxies to `5001`, *not* `5010` (fixed in this version)
+  - ✅ Ensure backend is running: `npm run server` (listens on `http://localhost:5010`)
+  - ✅ Confirm `vite.config.ts` proxies to `5010`, *not* `5001` (reverted in this version)
   - ✅ Check `console.log` output of both frontend and backend for errors
 
 - **Frontend loads but shows blank/error screen?**
