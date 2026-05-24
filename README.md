@@ -105,17 +105,6 @@ npm run dev:client  # Frontend on port 5173
                                         +-------------------+
 ```
 
-## Hackathon Demo Script (5 Minutes)
-
-1. **[0:00-0:30]** Show dashboard with live metrics updating in real-time
-2. **[0:30-1:00]** Navigate to Alerts page - show automatically detected anomalies
-3. **[1:00-2:00]** Click "Analyze" on a pending alert - show AI root cause analysis with confidence score
-4. **[2:00-2:30]** Expand the analysis to show probable causes, debugging steps, and remediation
-5. **[2:30-3:00]** Navigate to Debug Guide - show step-by-step commands with copy functionality
-6. **[3:00-3:30]** Show Trends page with historical charts and service comparison
-7. **[3:30-4:00]** Show Log Explorer with search, filtering, and manual ingestion
-8. **[4:00-5:00]** Show Settings with configurable thresholds and Q&A
-
 ## Judging Pitch (60 Seconds)
 
 "Silent API failures cost engineering teams thousands per minute. When APIs fail, developers waste 30+ minutes searching logs. By then, customers have already experienced downtime.
