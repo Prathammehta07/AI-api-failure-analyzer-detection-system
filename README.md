@@ -58,11 +58,6 @@ npm run server      # Backend on port 5001
 npm run dev:client  # Frontend on port 5173
 ```
 
-### Access the Application
-
-- **Dashboard:** http://localhost:5173
-- **API Base:** http://localhost:5010/api
-- **WebSocket:** ws://localhost:5010/ws
 
 ## API Endpoints
 
@@ -112,15 +107,6 @@ npm run dev:client  # Frontend on port 5173
                                         +-------------------+
 ```
 
-## Judging Pitch (60 Seconds)
-
-"Silent API failures cost engineering teams thousands per minute. When APIs fail, developers waste 30+ minutes searching logs. By then, customers have already experienced downtime.
-
-Our solution: An AI-powered agent that instantly detects API failures, identifies what broke using intelligent analysis, and tells engineers exactly how to fix it in under 2 minutes.
-
-MTTR: 30 minutes → 2 minutes. Zero customer impact. Works with any API infrastructure.
-
-Watch: API fails → Dashboard detects it → AI explains it → Engineers fix it. All in minutes instead of hours."
 
 ## Development
 
@@ -135,19 +121,6 @@ npm run preview
 npm run server:watch
 ```
 
-## Troubleshooting
-
-- **API requests failing (404/502) or WebSocket connection refused?**
-  - ✅ Ensure backend is running: `npm run server` (listens on `http://localhost:5010`)
-  - ✅ Confirm `vite.config.ts` proxies to `5010`, *not* `5001` (reverted in this version)
-  - ✅ Check `console.log` output of both frontend and backend for errors
-
-- **Frontend loads but shows blank/error screen?**
-  - ✅ Open browser DevTools → Network tab → check if `/api/metrics` or `/ws` fail
-  - ✅ Run `npm run server` first, *then* `npm run dev:client`
-
-- **Synthetic logs not appearing?**
-  - ✅ Verify `server/services/logGenerator.js` is enabled and configured in `server/index.js`
 
 ## License
 
