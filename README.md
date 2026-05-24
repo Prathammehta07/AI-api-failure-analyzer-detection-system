@@ -37,7 +37,14 @@ A production-grade, real-time API failure detection and AI-powered root cause an
 - Node.js 20+
 - npm
 
-### Installation
+### Setup Environment (Required)
+1. Copy `.env.example` to `.env`:
+   ```bash
+   copy .env.example .env
+   ```
+2. Verify `.env` contains required values (e.g., `BACKEND_URL=http://localhost:5001`).
+
+### Installation & Run
 
 ```bash
 # Install dependencies
@@ -127,6 +134,20 @@ npm run preview
 # Run backend with auto-reload
 npm run server:watch
 ```
+
+## Troubleshooting
+
+- **API requests failing (404/502) or WebSocket connection refused?**
+  - ✅ Ensure backend is running: `npm run server` (listens on `http://localhost:5001`)
+  - ✅ Confirm `vite.config.ts` proxies to `5001`, *not* `5010` (fixed in this version)
+  - ✅ Check `console.log` output of both frontend and backend for errors
+
+- **Frontend loads but shows blank/error screen?**
+  - ✅ Open browser DevTools → Network tab → check if `/api/metrics` or `/ws` fail
+  - ✅ Run `npm run server` first, *then* `npm run dev:client`
+
+- **Synthetic logs not appearing?**
+  - ✅ Verify `server/services/logGenerator.js` is enabled and configured in `server/index.js`
 
 ## License
 
